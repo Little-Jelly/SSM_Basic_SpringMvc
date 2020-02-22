@@ -1,4 +1,4 @@
-package com.yyf.test.Servlet;
+package com.yyf.core.test.Servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
