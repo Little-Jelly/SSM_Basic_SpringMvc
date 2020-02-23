@@ -27,5 +27,29 @@ springmvc数据绑定：
 
 springmvc视图解析器
 
+springmvc拦截器：使用到的接口
+org.springframework.web.servlet.HandlerInterceptor
+
+文件下载：
+org.springframework.web.multipart.commons.CommonMultipartResolver
 
 
+
+问题：
+1. 加入jar包：
+jackson-annotations-2.8.8.jar
+jackson-core-2.8.8.jar
+jackson-databind-2.8.8.jar
+加入这三个jar包之后，出现错误：
+org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'org.springframework.web.servlet.function.support.RouterFunctionMapping': 
+Invocation of init method failed; 
+nested exception is java.lang.NoClassDefFoundError: 
+com/fasterxml/jackson/databind/exc/InvalidDefinitionException
+这个问题需要弄一弄
+
+问题：
+在web/WEB-INF/lib/中没有加入jar包：
+commons-fileupload-1.3.2.jar
+commons-io-2.5.jar
+并且要加入到project的结构中，才能够正常使用，否则不能使用
