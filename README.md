@@ -1,4 +1,4 @@
-# SSM_Basic_SpringMvc
+# SSM_Basic_SpringMvc(Project_T6)
 
 springmvc前端与控制器的交互1：
 
