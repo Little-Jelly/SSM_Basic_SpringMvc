@@ -22,6 +22,15 @@ springmvc前端与控制器的交互1：
 
 
 springmvc数据绑定：
+简单数据绑定
+简单数据绑定1：简单基本类型（8大类型）
+简单数据绑定2：简单基本类型对应的对象类型
+简单数据绑定3：指定输入参数名
+
+
+复杂数据绑定
+复杂数据绑定1：数组
+复杂数据邦迪2：集合
 
 自定义数据转换器
 
@@ -53,3 +62,21 @@ com/fasterxml/jackson/databind/exc/InvalidDefinitionException
 commons-fileupload-1.3.2.jar
 commons-io-2.5.jar
 并且要加入到project的结构中，才能够正常使用，否则不能使用
+
+
+重新测试
+jackson-annotations-2.8.8.jar
+jackson-core-2.8.8.jar
+jackson-databind-2.8.8.jar
+这三个jar包
+搞定了：
+结论：成功
+做法：将spring的版本退回到4.3.6,（原来的版本5.3.2）
+分析：是spring的版本与jackson的版本不匹配导致的
+记录一下错误信息：
+“26-Feb-2020 08:34:47.078 WARNING [http-nio-8080-exec-1] org.springframework.web.context.support.XmlWebApplicationContext.refresh Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: com/fasterxml/jackson/databind/exc/InvalidDefinitionException
+ 26-Feb-2020 08:34:47.079 SEVERE [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet.initServletBean Context initialization failed
+ 	org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: com/fasterxml/jackson/databind/exc/InvalidDefinitionException
+ 		at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1320)
+”
+

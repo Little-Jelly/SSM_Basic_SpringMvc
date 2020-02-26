@@ -11,6 +11,6 @@
     <title>结果页面</title>
 </head>
 <body>
-    文件上传成功！
+        成功！
 </body>
 </html>

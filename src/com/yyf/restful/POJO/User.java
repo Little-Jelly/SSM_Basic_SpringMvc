@@ -1,4 +1,4 @@
-package com.yyf.jsonConvert.POJO;
+package com.yyf.restful.POJO;
 
 public class User {
     private String username;

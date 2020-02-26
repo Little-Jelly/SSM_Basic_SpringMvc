@@ -11,7 +11,39 @@
       <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
       <init-param>
           <param-name>contextConfigLocation</param-name>
-          <param-value>classpath:com/yyf/upload/springmvc-config.xml</param-value>
+
+          <!--通过url访问controller测试-->
+          <!--<param-value>classpath:com/yyf/annotationApplication/springmvc-config.xml</param-value>-->
+
+          <!--测试springmvc的核心注解-->
+          <!--<param-value>classpath:com/yyf/core/springmvc-config.xml</param-value>-->
+
+          <!--数据绑定：简单数据绑定-->
+          <!--<param-value>classpath:com/yyf/simpleDataBind/springmvc-config.xml</param-value>-->
+
+          <!--数据绑定：POJO数据绑定-->
+          <!--<param-value>classpath:com/yyf/simpleDataBindBindedPOJO/springmvc-config.xml</param-value>-->
+
+          <!--数据绑定：自定义类绑定-->
+          <!--<param-value>classpath:com/yyf/simpleDataBindCustomize/springmvc-config.xml</param-value>-->
+
+          <!--数据绑定：复杂数据绑定，数组参数绑定-->
+          <!--<param-value>classpath:com/yyf/complexDataBindArray/springmvc-config.xml</param-value>-->
+
+          <!--数据绑定：复杂数据绑定，集合参数绑定-->
+          <!--<param-value>classpath:com/yyf/complexDataBindCollection/springmvc-config.xml</param-value>-->
+
+          <!--进行json参数转换，并返回json数据-->
+          <!--<param-value>classpath:com/yyf/jsonConvert/springmvc-config.xml</param-value>-->
+
+          <!--进行restful风格参数转换-->
+          <!--<param-value>classpath:com/yyf/restful/springmvc-config.xml</param-value>-->
+
+          <!--拦截器-->
+          <!--<param-value>classpath:com/yyf/interceptors/springmvc-config.xml</param-value>-->
+
+          <!--使用拦截器实现用户登录-->
+          <param-value>classpath:com/yyf/interceptorLogin/springmvc-config.xml</param-value>
       </init-param>
   </servlet>
    <servlet-mapping>

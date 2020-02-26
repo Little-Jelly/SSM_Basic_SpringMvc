@@ -19,13 +19,13 @@ public class UserController {
         return "success";
     }
 
-    @RequestMapping(value = "selectUser2")
+    @RequestMapping(value = "/selectUser2")
     public String selectUser2(Integer id){
         System.out.println("id="+id);
         return "success";
     }
 
-    @RequestMapping(value = "selectUser3")
+    @RequestMapping(value = "/selectUser3")
     public String selectUser3(@RequestParam(value = "user_id")Integer id){
         System.out.println("id="+id);
         return "success";
